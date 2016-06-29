@@ -1,0 +1,13 @@
+---
+# handlers file for ansible-gitlab-updater
+
+   - name: Reconfigure GitLab
+     shell: sudo gitlab-ctl reconfigure
+   - name: Send update email
+     local_action: mail
+                   from="{{ send_from }}"
+                   to="{{ send_to }}"
+                   subject="[Ansible] GitLab was updated"
+                   body="The {{ inventory_hostname }} GitLab instance was updated using Ansible."
+
+

@@ -1,0 +1,10 @@
+---
+# tasks file for ansible-gitlab-updater
+
+  - name: Checking and keeping GitLab instance updated
+    apt: name=gitlab-ce state=latest
+    notify: 
+    - Reconfigure GitLab
+    - Send update email
+ 
+  

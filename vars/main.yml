@@ -1,0 +1,6 @@
+---
+
+# vars file for ansible-gitlab-updater
+send_from: ansible@example.com
+send_to: youremail@example.com
+
