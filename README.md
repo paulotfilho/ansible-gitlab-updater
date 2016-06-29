@@ -1,2 +1,33 @@
-# ansible-gitlab-updater
-Ansible Playbook to update GitLab instances installed via repository
+ansible-gitlab-updater
+=========
+
+Ansible Playbook to update GitLab instances installed via repository.
+
+Requirements
+------------
+
+- Ansible
+- A GitLab instance
+
+Role Variables
+--------------
+
+- send_to: Email address to receive "updated instance" mail.
+
+Example Playbook
+----------------
+
+Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
+
+    - hosts: gitlab01
+      gather_facts: no
+ 
+      roles:
+         - ansible-gitlab-updater
+
+
+License
+-------
+
+BSD
+
