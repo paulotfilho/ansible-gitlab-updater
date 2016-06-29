@@ -1,18 +1,20 @@
 ansible-gitlab-updater
 =========
 
-Ansible Playbook to update GitLab instances installed via repository.
+Ansible role to update GitLab instances installed via repository.
 
 Requirements
 ------------
 
 - Ansible
 - A GitLab instance
+- Postfix for sending update email.
 
 Role Variables
 --------------
 
-- send_to: Email address to receive "updated instance" mail.
+- send_from: Email address to send "updated instance" email.
+- send_to: Email address to receive "updated instance" email.
 
 Example Playbook
 ----------------
