@@ -3,6 +3,7 @@
 
    - name: Reconfigure GitLab
      shell: sudo gitlab-ctl reconfigure
+     become: true
    - name: Send update email
      local_action: mail
                    from="{{ send_from }}"
