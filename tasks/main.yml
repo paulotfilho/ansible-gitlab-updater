@@ -1,8 +1,11 @@
 ---
 # tasks file for ansible-gitlab-updater
 
-  - name: Checking and keeping GitLab instance updated
-    apt: name=gitlab-ce state=latest
+  - name: Update apt cache
+    apt: update_cache=yes cache_valid_time=3600
+  - name: Check and keep latest gitlab-ce version
+    apt: name=gitlab-ce update_cache=yes state=latest
+    become: true
     notify: 
     - Reconfigure GitLab
     - Send update email
